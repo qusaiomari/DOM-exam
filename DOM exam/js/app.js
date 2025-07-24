@@ -1,8 +1,8 @@
-// 1. Get sections and nav container
+
 const sections = document.querySelectorAll("section");
 const navList = document.getElementById("navbar__list");
 
-// 2. Build nav items dynamically
+
 sections.forEach(section => {
   const li = document.createElement("li");
   const a = document.createElement("a");
@@ -13,7 +13,7 @@ sections.forEach(section => {
   navList.appendChild(li);
 });
 
-// 3. Add 'active' class to section in viewport
+
 window.addEventListener("scroll", () => {
   sections.forEach(section => {
     const rect = section.getBoundingClientRect();
@@ -29,7 +29,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// 4. Smooth scroll on nav link click
+
 document.querySelectorAll("a.menu__link").forEach(link => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -39,7 +39,7 @@ document.querySelectorAll("a.menu__link").forEach(link => {
   });
 });
 
-// 5. Scroll to top button
+
 const topButton = document.getElementById("myBtn");
 
 window.onscroll = function () {
